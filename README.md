@@ -16,7 +16,10 @@ uv sync
 
 ```bash
 uv run mkdocs serve
+```
 
+ブラウザでアクセスしたイメージ
+![screenshot 7.png](images/launch.png)
 
 ## HTMLをビルドしたい
 
