@@ -1,0 +1,78 @@
+site_name: Sample Doc
+theme:
+  name: 'material'
+  language: ja
+  logo: image/logo.png
+  favicon: image/favicon.ico
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - content.footnote.tooltips
+    - navigation.sections
+  icon:
+    admonition:
+      alert: "material/alert"
+    annotation: material/arrow-right-circle
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: blue
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: blue grey
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+nav:
+  - トップページ: index.md
+  - 他ページ: other.md
+plugins:
+  - search
+  - table-reader
+  - tags
+  - git-revision-date-localized:
+      # MKDOCS_CI 環境変数が true にセットされていた場合にプラグインが有効
+      enabled: !ENV [MKDOCS_CI, false]
+      enable_creation_date: true
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - footnotes
+  - tables
+  - def_list
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+copyright: all right reserved by INAP Vision inc.
