@@ -68,6 +68,9 @@ mermaidも表示できる
 flowchart LR
     Start --> Stop
 ```
+
+他の図の表示イメージは[こちら](mermaid.md)から
+
 ---
 
 タブ付きコードブロック

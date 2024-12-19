@@ -31,6 +31,7 @@ theme:
         name: Switch to light mode
 nav:
   - トップページ: index.md
+  - Mermaid図: mermaid.md
   - 他ページ: other.md
 plugins:
   - search
