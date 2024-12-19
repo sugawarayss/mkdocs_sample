@@ -1,6 +1,7 @@
 # MKDocs サンプルリポジトリ
 
 MkDocs でドキュメントを作成する時のサンプルリポジトリです。
+[Github Pages](https://sugawarayss.github.io/mkdocs_sample/) にデプロイしています。
 
 できること
 - マテリアルデザイン
@@ -19,6 +20,7 @@ MkDocs でドキュメントを作成する時のサンプルリポジトリで�
 - CSVファイルをテーブル化
 - 脚注表示
 - 絵文字
+
 
 ## ローカル実行環境構築
 
@@ -51,6 +53,14 @@ uv run mkdocs serve
 
 ```bash
 uv run mkdocs build
+```
+
+## Github Pagesにデプロイしたい
+
+以下のコマンドでGithub Pagesにデプロイできます。
+
+```bash
+uv run mkdocs gh-deploy
 ```
 
 ## 参考リンク
