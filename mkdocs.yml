@@ -15,24 +15,35 @@ theme:
       alert: "material/alert"
     annotation: material/arrow-right-circle
   palette:
+    # 自動でダーク/ライトモード切り替え
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # ライトモード
     - media: "(prefers-color-scheme: light)"
-      primary: blue
-      scheme: default
+      scheme: default 
+      primary: deep orange
+      accent: blue grey
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
 
-    # Palette toggle for dark mode
+    # ダークモード
     - media: "(prefers-color-scheme: dark)"
-      primary: blue grey
       scheme: slate
+      primary: teal
+      accent: lime
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to system preference
+
 nav:
   - トップページ: index.md
   - Mermaid図: mermaid.md
   - 他ページ: other.md
+
 plugins:
   - search
   - table-reader
